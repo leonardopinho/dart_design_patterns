@@ -11,8 +11,8 @@ class Observer extends AbstractObserver {
   static Observer get instance => _instance;
 
   @override
-  void registerObserver(dynamic state, Function func) {
-    _listeners.add(ObserverItem(state, func));
+  void registerObserver(dynamic state, Function function) {
+    _listeners.add(ObserverItem(state, function));
   }
 
   @override
@@ -24,11 +24,7 @@ class Observer extends AbstractObserver {
   void notifyObserver(dynamic state, {dynamic value}) {
     _listeners.forEach((item) {
       if (item.state == state) {
-        if (value != null) {
-          item.function(value);
-        } else {
-          item.function();
-        }
+        value != null ? item.function(value) : item.function();
       }
     });
   }

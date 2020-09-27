@@ -1,7 +1,7 @@
 abstract class AbstractObserver {
-  void notifyObserver(dynamic state, {dynamic value});
-
-  void registerObserver(dynamic state, Function func);
+  void registerObserver(dynamic state, Function function);
 
   void removeObserver(dynamic state);
+
+  void notifyObserver(dynamic state, {dynamic value});
 }
