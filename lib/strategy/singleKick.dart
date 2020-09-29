@@ -2,7 +2,7 @@ import 'interfaces/kickBehavior.dart';
 
 class SingleKick implements KickBehavior {
   @override
-  void kick() {
-    print('This is a single kick!');
+  String kick() {
+    return 'This is a single kick!';
   }
 }

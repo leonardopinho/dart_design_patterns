@@ -8,7 +8,7 @@ class Ranger extends FighterStrategy {
       : super(kickBehavior, punchBehavior, jumpBehavior);
 
   @override
-  void display() {
-    print('I am a Ranger.');
+  String display() {
+    return 'I am a Ranger.';
   }
 }

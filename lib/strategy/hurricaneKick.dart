@@ -2,7 +2,7 @@ import 'interfaces/kickBehavior.dart';
 
 class HurricaneKick implements KickBehavior {
   @override
-  void kick() {
-    print('This is a Hurricane Kick!');
+  String kick() {
+    return 'This is a Hurricane Kick!';
   }
 }

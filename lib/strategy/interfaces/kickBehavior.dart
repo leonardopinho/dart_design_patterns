@@ -1,3 +1,3 @@
 abstract class KickBehavior {
-  void kick();
+  String kick();
 }

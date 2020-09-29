@@ -9,18 +9,18 @@ abstract class FighterStrategy {
 
   FighterStrategy(this.kickBehavior, this.punchBehavior, this.jumpBehavior);
 
-  void display();
+  String display();
 
-  void kick() {
-    kickBehavior.kick();
+  String kick() {
+    return kickBehavior.kick();
   }
 
-  void punch() {
-    punchBehavior.punch();
+  String punch() {
+    return punchBehavior.punch();
   }
 
-  void jump() {
-    jumpBehavior.jump();
+  String jump() {
+    return jumpBehavior.jump();
   }
 
   void setKickStrategy(KickBehavior kickBehavior) {

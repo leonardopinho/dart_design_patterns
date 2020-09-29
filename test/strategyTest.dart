@@ -1,4 +1,4 @@
-import 'package:DesignPattern/strategy/Ranger.dart';
+import 'package:DesignPattern/strategy/ranger.dart';
 import 'package:DesignPattern/strategy/fighterStrategy.dart';
 import 'package:DesignPattern/strategy/hurricaneKick.dart';
 import 'package:DesignPattern/strategy/longJump.dart';
@@ -10,15 +10,13 @@ import 'package:test/test.dart';
 void main() {
   test('should test the characters ability to change the strategy of kicks, jumps and punches', () {
     FighterStrategy ranger = Ranger(SingleKick(), SinglePunch(), ShortJump());
-    ranger.display();
-    ranger.jump();
+    expect(ranger.display(), 'I am a Ranger.');
+    expect(ranger.jump(), 'This is a short jump');
 
     ranger.setJumpStrategy(LongJump());
-    ranger.jump();
+    expect(ranger.jump(), 'This is a long jump');
 
     ranger.setKickStrategy(HurricaneKick());
-    ranger.kick();
-
-    //TODO: add assert
+    expect(ranger.kick(), 'This is a Hurricane Kick!');
   });
 }

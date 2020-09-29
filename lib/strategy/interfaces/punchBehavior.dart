@@ -1,3 +1,3 @@
 abstract class PunchBehavior {
-  void punch();
+  String punch();
 }

@@ -8,7 +8,7 @@ class Soldier extends FighterStrategy {
       : super(kickBehavior, punchBehavior, jumpBehavior);
 
   @override
-  void display() {
-    print('I am a Soldier.');
+  String display() {
+    return 'I am a Soldier.';
   }
 }

@@ -1,3 +1,3 @@
 abstract class JumpBehavior {
-  void jump();
+  String jump();
 }
